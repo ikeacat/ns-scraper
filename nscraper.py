@@ -3,7 +3,8 @@ import time
 
 print("Nationstates Puller")
 print("Brought to you by Entitize or ikeacat.")
-time.sleep(2)
+print("THIS VERSION OF THE PROGRAM IS DEPRECATED, PLEASE USE THE LATEST VERSION AT https://github.com/ikeacat/ns-scraper/releases")
+time.sleep(10)
 print("Please type the nation you want to access below. (lowercase).Please replace spaces with '+' signs.")
 nation = input("")
 time.sleep(1)
