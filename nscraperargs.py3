@@ -3,7 +3,7 @@ import urllib.request
 import sys
 
 # Vars & other stuff
-filesave = "nsdownload.html"
+filesave = "nsdownload.xml"
 
 def listCategories():
 	print("Public Categories:")
@@ -14,9 +14,8 @@ mainParser.add_argument('-nation', help='Define the Nation you would like to scr
 mainParser.add_argument('-password', help='(Optional), Enter the password, if you would like to get something that is private (Ex. Issues), Command Ex: -password "insertpasshere"')
 mainParser.add_argument('-saveToFile', help='(Optional), Save to a specific file. Is not compatible with "--saveOutputToSTDOUT". (EX: -saveToFile "downfile")', type=str)
 # mainParser.add_argument('-saveOutputToSTDOUT', help='(Optional), print output to STDOUT at end. Put (without quotes) "True" or "False" (CaSe SeNsItIvE!). Is not compatible with "-saveToFile", default is False')
-mainParser.add_argument('-category', help='Choose the category', type=str, default="")
+mainParser.add_argument('-category', help='Choose the category, put in double quotes NOT SINGLE QUOTES', default="")
 mainParser.add_argument('--listCategories', help='(Optional) List the categories avaliable, categories that have (P) before it require the defined nation\'s password. Use alone. Use True or False after.', type=bool)
-mainParser.add_argument('-numOfCategories', help='(Optional) Choose how many categories to use. Defaults to 1. Entering 0 will crash the program.', type=int, default=1)
 
 userDefArgs = mainParser.parse_args()
 
@@ -32,16 +31,10 @@ else:
 
 print("Nation defined. Proceeding")
 
-if(userDefArgs.numOfCategories == 0):
-    print("ERROR: Number of Categories is defined as 0. Must be 1 or above.")
-    raise SystemExit
-elif(userDefArgs.numOfCategories == 1):
-    print("1 category defined.")
-elif(userDefArgs.numOfCategories > 1):
-    print("%i of categories defined to parse. If the number of categories is smaller than the amount " % userDefArgs.numOfCategories)
-maxCategories = userDefArgs.numOfCategories - 1
-
-categories = userDefArgs.numOfCategories.split()
+strcat = userDefArgs.category
+print(strcat)
+strcat = strcat.replace(" ", "+")
+print(strcat)
 
 #if(userDefArgs.saveOutputToSTDOUT == "True"):
 #	filesave = sys.stdout
@@ -53,7 +46,7 @@ elif(userDefArgs.saveToFile == None):
 	print("No file defined. Defaulting to default.")
 
 if(userDefArgs.category != None):
-	category = userDefArgs.category
+	category = strcat
 	print("I am hoping you used a valid category, because I dont feel like checking. If its invalid, it will usually just return with the NATION tags. Proceeding")
 elif(userDefArgs.category == None):
 	print("ERROR: Category not defined PLease define a category using '-category'. Exiting.")
