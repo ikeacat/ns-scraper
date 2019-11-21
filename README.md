@@ -1,5 +1,5 @@
-# ns-scaper
-A scraper for NationStates using the NationStates Official API
+# THE NationStates Scraper
+A scraper for [NationStates](http://nationstates.net) using the NationStates Official API.
 
 ## Documentation
 
