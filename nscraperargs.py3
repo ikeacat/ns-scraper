@@ -32,9 +32,7 @@ else:
 print("Nation defined. Proceeding")
 
 strcat = userDefArgs.category
-print(strcat)
 strcat = strcat.replace(" ", "+")
-print(strcat)
 
 #if(userDefArgs.saveOutputToSTDOUT == "True"):
 #	filesave = sys.stdout
