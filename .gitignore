@@ -107,3 +107,7 @@ nsdownload.xml
 nsdownload.html
 *.xml
 *.txt
+*.exe
+*.pyc
+compile.py
+__pycache__/
