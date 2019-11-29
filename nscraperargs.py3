@@ -24,7 +24,8 @@ if(userDefArgs.listCategories == True):
 	raise SystemExit
 
 if(userDefArgs.nation == None):
-	print("ERROR: Nation not defined. Please define a nation using '-nation'. Exiting.")
+	print("ERROR: Nation not defined.")
+	print("Please define a nation using '-nation'. Exiting.")
 	raise SystemExit
 else:
 	nation = userDefArgs.nation
@@ -47,7 +48,8 @@ if(userDefArgs.category != None):
 	category = strcat
 	print("I am hoping you used a valid category, because I dont feel like checking. If its invalid, it will usually just return with the NATION tags. Proceeding")
 elif(userDefArgs.category == None):
-	print("ERROR: Category not defined PLease define a category using '-category'. Exiting.")
+	print("ERROR: Category not defined.")
+	print("Please define a category using '-category'. Exiting.")
 
 print("Don't know if you defined a password, it doesn't matter yet because I haven't coded that path yet.")
 
