@@ -16,11 +16,28 @@ For next release:
 you can get to this using the argument -h or --help
 
 ```
--nation [NATION NAME] | Define the nation to scrape from
--category "[CATEGORIES]" | Categories to get. Use quotes around your categories, unless defining one category.
--password [PASSWORD FOR NATION] | Password to get private information. (Doesnt do anything, that will be in the next release)
--saveToFile [File to save to] | File to save to. No spaces in the file name.
---listCategories [True / False] | If true, will list categories then terminate. Use alone. If used, other args wont matter.
+usage: nscraperargs.(exe or pyc or py or py3) [-h] [-nation NATION] [-password PASSWORD]
+                        [-saveToFile SAVETOFILE] [-category CATEGORY]
+                        [-listCategories LISTCATEGORIES]
+
+Process main commands
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -nation NATION        Define the Nation you would like to scrape from.
+  -password PASSWORD    (Optional), Enter the password, if you would like to
+                        get something that is private (Ex. Issues), Command
+                        Ex: -password "insertpasshere"
+  -saveToFile SAVETOFILE
+                        (Optional), Save to a specific file. Is not compatible
+                        with "--saveOutputToSTDOUT". (EX: -saveToFile
+                        "downfile")
+  -category CATEGORY    Choose the category, put in double quotes NOT SINGLE
+                        QUOTES
+  -listCategories LISTCATEGORIES
+                        (Optional) List the categories avaliable. use public
+                        or private after to view either public or private
+                        categories
 ```
 
 ### Execute
@@ -89,5 +106,25 @@ Returns:
 <NATION id="entitize">
   <CAPITAL>Bark Forest Preserve</CAPITAL>
   <ANIMAL>Entity</ANIMAL>
+</NATION>
+```
+
+Example 4: (Only compatible with 1.2 and up)
+
+Using py file:
+```bash
+python3 nscraperargs-1-2.py -nation Entitize -password "thisisntmyrealpassword" -category "nextissuetime" 
+```
+
+Using exe file:
+```bash
+nscraperargs-1-2.exe -nation Entitize -password "thisisntmyrealpassword" -category "nextissuetime"
+```
+
+Returns: (in unix Epoch time) (taken at 2:32 PM CST)
+(in nsdownload.xml)
+```xml
+<NATION id="entitize">
+  <NEXTISSUETIME>1575250840</NEXTISSUETIME>
 </NATION>
 ```
