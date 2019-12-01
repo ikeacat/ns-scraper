@@ -1,6 +1,13 @@
 # THE NationStates Scraper
 A scraper for [NationStates](http://nationstates.net) using the NationStates Official API.
 
+## Todo
+
+For next release:
+[ ] Enable passworded info
+[ ] (maybe) Enable output to STDOUT
+[ ] Region info???
+
 ## Documentation
 
 ### List of Arguments
