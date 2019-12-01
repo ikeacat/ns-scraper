@@ -4,9 +4,9 @@ A scraper for [NationStates](http://nationstates.net) using the NationStates Off
 ## Todo
 
 For next release:
-[ ] Enable passworded info
-[ ] (maybe) Enable output to STDOUT
-[ ] Region info???
+- [ ] Enable passworded info
+- [ ] (maybe) Enable output to STDOUT
+- [ ] Region info???
 
 ## Documentation
 
