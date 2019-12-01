@@ -39,7 +39,11 @@ nscraperargs-[insert version here].exe [args here]
 Example 1:
 
 ```bash
-python3 nscraperargs-1-0.exe -nation Entitize -category animal
+python3 nscraperargs-1-0.pyc -nation Entitize -category animal
+```
+
+```bash
+nscraperargs-1-0.exe -nation Entitize -category animal
 ```
 
 Returns:
@@ -51,8 +55,15 @@ Returns:
 ```
 
 Example 2:
+
+if using pyc file:
 ```bash
 python3 nscraperargs-1-0.pyc -nation Entitize -category capital
+```
+
+if using exe file:
+```bash
+nscraperargs-1-0.exe -nation Entitize -category capital
 ```
 
 Returns:
@@ -63,9 +74,13 @@ Returns:
 </NATION>
 ```
 
-Example 3:
+Example 3: (is version 1.1 because that is minimum version you can define 2 or more categories)
 ```bash
-python3 nscraperargs-1-1.exe -nation Entitize -category "capital animal"
+python3 nscraperargs-1-1.pyc -nation Entitize -category "capital animal"
+```
+
+```bash
+nscraperargs-1-1.exe -nation Entitize -category "capital animal"
 ```
 
 Returns:
