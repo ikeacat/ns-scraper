@@ -111,3 +111,5 @@ nsdownload.html
 *.pyc
 compile.py
 __pycache__/
+github
+# above is my private key, I dont want that on any repo
